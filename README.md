@@ -4,7 +4,7 @@ This repository contains the official `PyTorch` implementation of the paper:
 
 **Pro-HAN: A Heterogeneous Graph Attention Network for Profile-Based Spoken Language Understanding**.
 
-Dechuan Teng, Chunlin Lu, [Xiao Xu](https://looperxx.github.io/), [Wanxiang Che](http://ir.hit.edu.cn/~car/) [Libo Qin](https://faculty.csu.edu.cn/qinlibo/zh_CN/index.htm).
+Dechuan Teng, Chunlin Lu, [Xiao Xu](https://looperxx.github.io/), [Wanxiang Che](http://ir.hit.edu.cn/~car/), [Libo Qin](https://faculty.csu.edu.cn/qinlibo/zh_CN/index.htm).
 
 ***ICASSP 2024***.
 
