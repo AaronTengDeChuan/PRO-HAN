@@ -7,8 +7,9 @@ This repository contains the official `PyTorch` implementation of the paper:
 Dechuan Teng, Chunlin Lu, [Xiao Xu](https://looperxx.github.io/), [Wanxiang Che](http://ir.hit.edu.cn/~car/), [Libo Qin](https://faculty.csu.edu.cn/qinlibo/zh_CN/index.htm).
 
 ***ICASSP 2024***.
+[[Paper(Arxiv)]](https://arxiv.org/abs/2402.03900)
 
-[//]: # ([[Paper&#40;Arxiv&#41;]]&#40;&#41; [[Paper]]&#40;&#41;)
+[//]: # ([[Paper]]&#40;&#41;)
 
 In the following, we will guide you how to use this repository step by step.
 
@@ -58,6 +59,17 @@ The script **[main.py](main.py)** acts as a main function to the project, you ca
 ```Shell
 DGLBACKEND=pytorch python main.py -g -fs -es -uf -ui -bs 16 -wd 1e-6 -lr 0.001 -dr 0.2 -lsf 0.5 -lsp 5 -nehd 128 -nahd 128 -kgntr 'encode_bow' -spntr 'embed_bow' -uppgn -kgirge -upirpe -cairse -kgup -kgca -upca -uttpf 'leaf' -has 'sample_weight' -iuw 'node_aggregation'
 ```
+
+Due to some stochastic factors(e.g., GPU and environment), it maybe need to tune the hyper-parameters to reproduce the results reported in our paper. Here are the suggested hyper-parameter settings:
+
+- random_seed
+- word_embedding_dim: [64, 128]
+- encoder_hidden_dim: [128, 256, 768]
+- attention_hidden_dim: [128, 256, 1024]
+- node_encoder_hidden_dim: [128, 256, 768]
+- node_attention_hidden_dim: [128, 256, 1024]
+- ......
+
 And we also provide the **[best model](https://drive.google.com/file/d/1jb7oZYk39KavVYQyUjT4pDV3PSNP3hbh/view?usp=sharing)** saved.
 Download and unzip it into the `save` folder.
 
@@ -82,16 +94,32 @@ If you have any question, please issue the project or email [me](mailto:dcteng@i
   
 - We also thank for the open-source GNN Library [DGL](https://github.com/dmlc/dgl).
 
-[//]: # (## Citation)
+## Citation
 
-[//]: # ()
-[//]: # (If you use the source codes in this repository, please cite our paper.)
 
-[//]: # ()
-[//]: # (The bibtex is listed below:)
+If you use the source codes in this repository, please cite our paper.
 
-[//]: # ()
-[//]: # (```)
 
-[//]: # ()
-[//]: # (```)
+The bibtex is listed below:
+
+
+```
+@article{DBLP:journals/corr/abs-2402-03900,
+  author       = {Dechuan Teng and
+                  Chunlin Lu and
+                  Xiao Xu and
+                  Wanxiang Che and
+                  Libo Qin},
+  title        = {Pro-HAN: {A} Heterogeneous Graph Attention Network for Profile-Based Spoken Language Understanding},
+  journal      = {CoRR},
+  volume       = {abs/2402.03900},
+  year         = {2024},
+  url          = {https://doi.org/10.48550/arXiv.2402.03900},
+  doi          = {10.48550/ARXIV.2402.03900},
+  eprinttype    = {arXiv},
+  eprint       = {2402.03900},
+  timestamp    = {Mon, 12 Feb 2024 13:36:38 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2402-03900.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+```
